@@ -1,0 +1,363 @@
+/* Employee Dashboard Styles - uses existing dashboard styles from Dashboard.css */
+
+/* Filter Controls */
+.filter-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-controls input[type="date"] {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Button Styles - using existing btn classes */
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.page-info {
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+/* Order Type and Status Badges */
+.order-type {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.order-type.pos {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.order-type.online {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.processing {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status.delivered {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.product-image {
+  height: 120px;
+  background: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-placeholder {
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.product-info h4 {
+  margin: 0 0 0.25rem 0;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.brand {
+  color: var(--secondary);
+  font-size: 0.8rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.sales-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity {
+  font-size: 0.8rem;
+  color: var(--secondary);
+}
+
+.revenue {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* Monthly Performance Chart */
+.chart-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  height: 150px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.month-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.bar-container {
+  height: 100px;
+  width: 20px;
+  display: flex;
+  align-items: end;
+  margin-bottom: 0.5rem;
+}
+
+.bar {
+  width: 100%;
+  background: linear-gradient(to top, var(--accent), var(--primary));
+  border-radius: 4px 4px 0 0;
+  min-height: 10px;
+  transition: all 0.3s ease;
+}
+
+.month-info {
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.month-name {
+  display: block;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+
+.month-orders {
+  display: block;
+  color: var(--secondary);
+  margin-bottom: 2px;
+}
+
+.month-sales {
+  display: block;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--shadow-hover);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--secondary);
+  color: var(--white);
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--white);
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.order-details {
+  padding: 1.5rem;
+}
+
+.order-info {
+  margin-bottom: 1.5rem;
+}
+
+.order-info p {
+  margin: 0.25rem 0;
+  color: var(--primary);
+}
+
+.order-items h4 {
+  margin: 0 0 1rem 0;
+  color: var(--primary);
+}
+
+.order-items table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.order-items th,
+.order-items td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.order-items th {
+  background: var(--light-gray);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.order-total {
+  text-align: right;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-controls input[type="date"],
+  .filter-controls .btn {
+    width: 100%;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .chart-container {
+    height: 120px;
+  }
+
+  .bar-container {
+    height: 80px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

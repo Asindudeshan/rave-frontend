@@ -1,0 +1,190 @@
+/* Add Product Modal Styles */
+.inventory-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.inventory-modal-content {
+  background: white;
+  border-radius: 8px;
+  padding: 0;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.inventory-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--light-gray);
+}
+
+.inventory-modal-header h2 {
+  margin: 0;
+  color: var(--primary);
+}
+
+.inventory-modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--dark-gray);
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inventory-modal-close:hover {
+  color: var(--accent);
+}
+
+/* Product Form Styles */
+.inventory-product-form {
+  padding: 1.5rem;
+}
+
+.inventory-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.inventory-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.inventory-form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.inventory-form-group input,
+.inventory-form-group select,
+.inventory-form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.inventory-form-group input:focus,
+.inventory-form-group select:focus,
+.inventory-form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.inventory-form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.inventory-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Enhanced Button Styles */
+.inventory-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.inventory-btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+.inventory-btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.inventory-btn-primary:hover {
+  background-color: var(--secondary);
+}
+
+.inventory-btn-secondary {
+  background-color: var(--border-color);
+  color: var(--dark-gray);
+}
+
+.inventory-btn-secondary:hover {
+  background-color: #d1d5db;
+}
+
+.inventory-btn-danger {
+  background-color: var(--accent);
+  color: white;
+}
+
+.inventory-btn-danger:hover {
+  background-color: #c0392b;
+}
+
+.inventory-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Section Header Enhancement */
+.inventory-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .inventory-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-modal-content {
+    width: 95%;
+    margin: 1rem;
+  }
+
+  .inventory-form-actions {
+    flex-direction: column;
+  }
+}

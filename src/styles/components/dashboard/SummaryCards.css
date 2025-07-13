@@ -1,0 +1,27 @@
+/* Summary Cards Styles */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.summary-cards .card {
+  background: var(--white);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--accent);
+}
+
+.summary-cards .card h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.summary-cards .card .value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent);
+}

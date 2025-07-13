@@ -1,0 +1,18 @@
+/* Recent Orders Table Styles */
+.recent-orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recent-orders-table th,
+.recent-orders-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.recent-orders-table th {
+  background: var(--light-gray);
+  font-weight: 600;
+  color: var(--primary);
+}

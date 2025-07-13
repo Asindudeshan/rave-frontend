@@ -1,0 +1,28 @@
+/* Best Products Table Styles */
+.best-products-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.best-products-table th,
+.best-products-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.best-products-table th {
+  background: var(--light-gray);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.best-products-table .product-name {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.best-products-table .sales-count {
+  color: var(--success);
+  font-weight: bold;
+}

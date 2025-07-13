@@ -1,0 +1,21 @@
+/* Featured Products Styles */
+.featured-products {
+  background: var(--light-gray);
+  padding: 4rem 0;
+  margin: 3rem 0;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Mobile Featured Products */
+@media (max-width: 768px) {
+  .featured-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,165 @@
+/* Order Details Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-hover);
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.popup-header h2 {
+  margin: 0;
+  color: var(--primary);
+}
+
+.popup-body {
+  padding: 20px;
+}
+
+.order-info {
+  margin-bottom: 30px;
+}
+
+.order-info h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+}
+
+.order-info p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.order-items h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 5px;
+}
+
+.order-items table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.order-items th,
+.order-items td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.order-items th {
+  background-color: var(--light-gray);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.product-info-popup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-image-small {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+/* Status badges in popup */
+.popup-body .status-pending {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.popup-body .status-processing {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.popup-body .status-shipped {
+  background-color: #6f42c1;
+  color: white;
+}
+
+.popup-body .status-delivered {
+  background-color: #28a745;
+  color: white;
+}
+
+.popup-body .status-cancelled {
+  background-color: #dc3545;
+  color: white;
+}
+
+.popup-body .status-pending,
+.popup-body .status-processing,
+.popup-body .status-shipped,
+.popup-body .status-delivered,
+.popup-body .status-cancelled {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Status Dropdown Styles */
+.status-dropdown-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.status-dropdown {
+  padding: 5px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.status-dropdown:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.status-update-btn {
+  padding: 5px 15px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}

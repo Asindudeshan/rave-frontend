@@ -1,0 +1,75 @@
+/* Orders Table Styles */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.orders-table th {
+  background: var(--light-gray);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.status-pending {
+  background: #f39c12;
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-processing {
+  background: #3498db;
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-shipped {
+  background: #9b59b6;
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-delivered {
+  background: var(--success);
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status-cancelled {
+  background: var(--danger);
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.orders-table td:last-child {
+  text-align: center;
+}
+
+.orders-table td .btn {
+  margin-right: 0.5rem;
+}
+
+.orders-table td .btn:last-child {
+  margin-right: 0;
+}

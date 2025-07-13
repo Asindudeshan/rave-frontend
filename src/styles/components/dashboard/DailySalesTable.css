@@ -1,0 +1,28 @@
+/* Daily Sales Table Styles */
+.daily-sales-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.daily-sales-table th,
+.daily-sales-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.daily-sales-table th {
+  background: var(--light-gray);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.daily-sales-table .sales-amount {
+  color: var(--success);
+  font-weight: bold;
+}
+
+.daily-sales-table .order-count {
+  color: var(--secondary);
+  font-weight: 500;
+}
