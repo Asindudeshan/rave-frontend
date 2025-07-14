@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { getImageUrl } from "../services/api";
 
 const ProductCard = ({ product, onAddToCart, onProductClick }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <div
       className="product-card"
@@ -10,10 +12,19 @@ const ProductCard = ({ product, onAddToCart, onProductClick }) => {
     >
       <div className="product-image">
         {product.imageUrl || product.image ? (
-          <img
-            src={product.imageUrl || getImageUrl(product.id)}
-            alt={product.name}
-          />
+          <>
+            {!imageLoaded && (
+              <div className="loading-spinner">
+                <div className="spinner"></div>
+              </div>
+            )}
+            <img
+              src={getImageUrl(product.id)}
+              alt={product.name}
+              style={{ display: imageLoaded ? "block" : "none" }}
+              onLoad={() => setImageLoaded(true)}
+            />
+          </>
         ) : (
           <div className="product-placeholder">
             <span>👟</span>
