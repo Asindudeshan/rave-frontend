@@ -1,7 +1,8 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5005/api";
-const IMAGE_BASE_URL = "http://localhost:5005";
+const API_BASE_URL =
+  "https://bd99e233-9e69-4c97-bc11-e9bd29e78f56.e1-us-east-azure.choreoapps.dev/api";
+const IMAGE_BASE_URL = "https://bd99e233-9e69-4c97-bc11-e9bd29e78f56.e1-us-east-azure.choreoapps.dev";
 
 // Helper function to get full image URL
 export const getImageUrl = (imagePath) => {
