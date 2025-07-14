@@ -14,11 +14,11 @@ USER root
 # Change permissions
 # RUN chown -R 10014:10014 /app
 
-# Switch back to non-root user
-USER 10014
 
 # Build the app
 RUN npm run build
+# Switch back to non-root user
+USER 10014
 
 EXPOSE 3000
 
