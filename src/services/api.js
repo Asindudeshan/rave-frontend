@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const API_BASE_URL =
-  "https://rave-backend-7d1v-gxe5e0w9x-asehans-projects.vercel.app/api";
+  "https://rave-backend-b8efggd0f7hmhphm.canadacentral-01.azurewebsites.net/api";
 const IMAGE_BASE_URL =
-  "https://rave-backend-7d1v-gxe5e0w9x-asehans-projects.vercel.app";
+  "https://rave-backend-b8efggd0f7hmhphm.canadacentral-01.azurewebsites.net";
 
 // Helper function to get full image URL
 export const getImageUrl = (imagePath) => {
